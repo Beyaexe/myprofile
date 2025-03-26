@@ -1,0 +1,74 @@
+
+:root{
+    --main-color: #252525;
+    --main-white: white;
+    --color-team-description: rgba(255, 20, 147, 0.8);
+}
+
+@font-face {
+    font-family: monckeberg;
+    src: url(fonts/Monckeberg-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color);
+}
+
+.navbar{
+    width: 100%;
+    height: 10%;
+    background-color: var(--main-color);
+}
+.navbar-nav{
+    width: 100%;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.nav-link{
+    color: white;
+    font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.nav-title{
+    color: white;
+    font-size: 1.4em;
+}
+
+.active{
+    color: pink !important;
+}
+
+#main-container{
+    height: 100%;
+}
+    #main-container h1{
+        color: var(--main-white);
+        font-family: monckeberg;
+        font-size: 2.9em;
+    }
+
+    
+
+#Hello{
+    margin: 5%;
+}
+    #Hello p{
+    font-size: 1.5em;
+    color: var(--main-white);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
