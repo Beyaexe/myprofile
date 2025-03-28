@@ -68,7 +68,7 @@ body{
 #main-container h1 {
     color: var(--main-white);
     font-family: geishta;
-    font-size: 5.4em;
+    font-size: 4.5em;
     text-shadow: 0px -5px 20px rgba(255, 255, 255, 0.9); 
     margin: 0 !important;
     line-height: 0.9 !important;
@@ -87,26 +87,24 @@ body{
 }
 
 #Hello, #Apresentation{
-    margin: 5%;
-    padding-right: 45%;
+    margin: 5% 0% 2% 5%;
+    padding-right: 50%;
 }
     #Hello p{
-    font-size: 1.18em;
+    font-size: 1.40em;
     color: var(--main-white);
     text-shadow: 5px -2px 10px rgba(255,255,255,0.48);
     font-family: 'Times New Roman', Times, serif;
     margin: 0 !important;
 }
 
-#Apresentation {
-    margin-top: 5%;
-    position: relative;
+#Apresentation {    position: relative;
     display: inline-block;
 }
 
 #Apresentation p{
     color: var(--main-white);
-    font-size: 1.18em;
+    font-size: 1.14em;
     font-family: 'Times New Roman', Times, serif;    
 }
 #Apresentation a{
@@ -114,6 +112,7 @@ body{
     color: var(--main-color-sakura);
     font-family: geishta;
     font-size: 2.4em;
+
     transition: all ease-in-out 0.2s;
 }
     #Apresentation a:hover{
