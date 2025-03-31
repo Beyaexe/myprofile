@@ -1,0 +1,2 @@
+- Colocar os balões chineses abaixo da imagem (provavelmente vou fazer)
+- No começo da div LatestWorks colocar uma série de curiosidades legais (fazer em js, um array com os textos ou algo de IA.)
