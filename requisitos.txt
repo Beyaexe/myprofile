@@ -1,4 +1,5 @@
 - Colocar sombra na borda da imagem da home
 - No começo da div LatestWorks colocar uma série de curiosidades legais (fazer em js, um array com os textos ou algo de IA.). Talvez,
 adicionar a nezuko puxando pode ser legal.
-- Se fizer um cenário um pouco mais noturno, adicionar lanternas chinesas subindo até o topo.
+- Se fizer um cenário um pouco mais noturno, adicionar lanternas chinesas subindo até o topo 
+(esse pode ser só nas laterais na borda da página também, se for o caso)

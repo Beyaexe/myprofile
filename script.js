@@ -6,30 +6,23 @@ function createPetal() {
   petal.src = petalImages[Math.floor(Math.random() * petalImages.length)];
   petal.classList.add("petal");
 
-  // Posição inicial aleatória no topo
   petal.style.left = `${Math.random() * 100}vw`;
 
-  // Define um tamanho aleatório para a pétala
-  const size = Math.random() * 15 + 15; // Entre 15px e 27px
+  const size = Math.random() * 15 + 15; 
   petal.style.width = `${size}px`;
 
-  // Define um deslocamento horizontal aleatório
-  const drift = Math.random() * 40 - 20; // Entre -20vw e +20vw
+  const drift = Math.random() * 40 - 20; 
   petal.style.setProperty("--drift", `${drift}vw`);
 
-  // Duração da animação aleatória
-  const duration = Math.random() * 3 + 2; // Entre 3s e 6s
+  const duration = Math.random() * 3 + 2; 
   petal.style.animationDuration = `${duration}s`;
 
-  // Rotação inicial aleatória
   const rotation = Math.random() * 360;
   petal.style.transform = `rotate(${rotation}deg)`;
 
   petalContainer.appendChild(petal);
 
-  // Remove a pétala quando a animação termina
   setTimeout(() => petal.remove(), duration * 1000);
 }
 
-// Criar pétalas continuamente sem sobrecarregar a página
-setInterval(createPetal, 500);
+setInterval(createPetal, 400);
