@@ -8,6 +8,7 @@
     --main-color-navbar: #1f1f1f;
     --main-color-navbar-font: white;
     --secondary-color-font: white;
+    --main-color-card: #293241;
     /* --main-color-sakura: rgb(238, 77, 144);  */
 }
 
@@ -203,6 +204,7 @@ body{
 
 #LatestWorks{
     width: 100%;
+    height: 85%;
     background-color: var(--main-color);
     display: flex;
     /* align-items: center; */
@@ -215,4 +217,33 @@ body{
     font-family: geishta;
     font-size: 2.7em;
 }
+
+#LatestWorks .cardWork{
+    background-color: var(--main-color-card);
+    width: 18%;
+    height: 75%;
+    position: relative;
+    border: solid red 2px;
+}
+
+.cardWork .stick{
+    position: absolute;
+    width: 35%;
+    top: 10%;
+    left: 0;
+}
+.cardWork .stick2{
+    position: absolute;
+    width: 35%;
+    top: 10%;
+    right: 0%;
+}
+.cardWork .cloudsPack{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+}
+
+
 
