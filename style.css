@@ -8,7 +8,6 @@
     --main-color-navbar: #1f1f1f;
     --main-color-navbar-font: white;
     --secondary-color-font: white;
-    --main-color-card: #293241;
     /* --main-color-sakura: rgb(238, 77, 144);  */
 }
 
@@ -58,6 +57,7 @@ html{
 body{
     width: 100%;
     height: 100%;
+    background-color: var(--main-color);
 }
 
 .container-fluid{
@@ -204,6 +204,7 @@ body{
 #LatestWorks{
     width: 100%;
     height: 100%;
+    margin-bottom: 5%;
     background-color: var(--main-color);
     text-align: center;
     padding: 2%;
@@ -211,44 +212,49 @@ body{
 
 .container-works{
     width: 100%;
-    height: 95%;
+    height: 85%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
     gap: 5%;
 } 
 #LatestWorks h2{
     color: var(--secondary-color-font);
     font-family: geishta;
     font-size: 2.7em;
-    /* margin-bottom: 5%; */
+    margin-bottom: 5%;
 }
 
 .cardWork{
-    background-color: var(--main-color-card);
-    width: 20%;
-    height: 85%;
+    background-image: url(img/backgroundCard.png);
+    background-size: cover;
+    cursor: pointer;
+    width: 21%;
+    height: 100%;
     position: relative;
     text-align: center;
     overflow: hidden;
+    border: solid #f77c97 2px;
+    transition: all ease-in-out 0.3s;
+}
+.cardWork:hover{
+    transform: scale(105%);
 }
     .cardWork .stick{
         position: absolute;
-        width: 35%;
-        top: 10%;
+        width: 80%;
+        top: 7%;
         left: 0;
     }
-    .cardWork .stick2{
+    .cardWork .flowers{
         position: absolute;
-        width: 30%;
-        top: 10%;
-        right: 0%; 
+        width: 50%;
+        bottom: 5%;
+        right: 5%; 
     }
-    .cardWork .cloudsPack{
-        position: absolute;
+    .cardWork .borderCard{
         width: 100%;
-        bottom: 0;
-        left: 0%;
+        height: 100%;
     }
     .cardWork .cardPicture{
         position: absolute;
@@ -285,4 +291,21 @@ body{
         color: gold;
      }
 
+footer{
+    color: white;
+    padding-bottom: 3%;
+}
 
+.list-inline{
+    width: 100%;
+}
+
+.list-item{
+    width: 3%;
+}
+    .list-item img{
+        width: 100%;
+        height: 100%;
+    }
+        /* .list-item:hover{
+        } */
