@@ -1,10 +1,10 @@
-const petalContainer = document.getElementById("petal-container");
-const petalImages = ["img/petal.png", "img/petal2.png", "img/petal3.png"];
+const petalContainer = document.getElementById("lamp-container");
+const petalImages = "img/lamp.png";
 
-function createPetal() {
-  const petal = document.createElement("img");
-  petal.src = petalImages[Math.floor(Math.random() * petalImages.length)];
-  petal.classList.add("petal");
+function createLamp() {
+  const lamp = document.createElement("img");
+  lamp.src = petalImages;
+  lamp.classList.add("petal");
 
   petal.style.left = `${Math.random() * 100}vw`;
 
