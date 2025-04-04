@@ -243,7 +243,7 @@ body{
     background-size: cover;
     cursor: pointer;
     width: 21%;
-    height: 100%;
+    height: 95%;
     position: relative;
     text-align: center;
     overflow: hidden;
@@ -271,7 +271,7 @@ body{
     }
     .cardWork .cardPicture{
         position: absolute;
-        width: 70%;
+        width: 65%;
         left: 50%;
         right: 50%; 
         top: 50%;
@@ -331,18 +331,33 @@ footer{
 
 /*ABOUT ME*/
 #AboutMe{
-    border: solid red 2px;
-    margin: 7%;
+    margin: 10%;
+    margin-top: 5%;
 }
 #AboutMe h2{
-    color: var(--secondary-color-font);
+    color: var(--main-color-sakura);
     font-family: geishta;
     font-size: 4.7em;
 }   
 
 #AboutMe p{
     color: var(--secondary-color-font);
+    font-size: 1.2em;
+    text-align: justify;
     font-family: 'Times New Roman', Times, serif;
 }
+
+#AboutMe .aboutMe{
+    width: 65%;
+    margin-right: 5%;
+}
+
+#AboutMe .picture{
+    width: 35%;
+
+}
+    #AboutMe .picture img{
+        width: 100%;
+    }
 /*END ABOUT ME*/
 
