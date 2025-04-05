@@ -6,7 +6,8 @@
     --main-color: #1b1b1b;
     --main-color-sakura: #f77c97;
     /* --main-color-navbar: #141414; */
-    --main-color-navbar: #1f1f1f;
+    /* --main-color-navbar: #1f1f1f; */
+    --main-color-navbar: #1b1b1b;
     --main-color-navbar-font: white;
     --secondary-color-font: white;
     /* --main-color-sakura: rgb(238, 77, 144);  */
@@ -38,6 +39,7 @@
     100% { transform: translateY(0); }
 }
 
+
 @keyframes fall {
     0% {
       transform: translateY(0) translateX(0) rotate(0deg);
@@ -52,17 +54,43 @@
     }
   }
 
+
+  /**/
   @keyframes fly {
     0% {
-      transform: translateY(0) translateX(0) rotate(0deg);
+      transform: translateY(0);
       opacity: 1;
     }
-    50%{
-        opacity: 0.7;
+    100% {
+      transform: translateY(-100vh);
+      opacity: 0;
+    }
+  }
+  
+  
+  @keyframes swing {
+    0% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
     }
     100% {
-      transform: translateY(100vh) translateX(var(--drift)) rotate(20deg);
-      opacity: 0;
+      transform: translateX(-5px);
+    }
+  }
+  
+  @keyframes rotate {
+    0%   { transform: rotate(calc(var(--rotate-deg) * -1)); }
+    100% { transform: rotate(var(--rotate-deg)); }
+  }
+  
+  @keyframes flicker {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.75;
     }
   }
   
@@ -345,26 +373,34 @@ footer{
 
 /*ABOUT ME*/
 #lamp-container {
-    position: absolute; /*fixed tambem funciona, mas aparentemente pega a tela inteira*/
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    pointer-events: none; 
-    overflow: hidden;
+    pointer-events: none;
+    overflow: visible;
+    z-index: 0;
+  }
+  
+  
+
+  .lamp-wrapper {
+    position: absolute;
+    animation: fly linear forwards;
   }
   
   .lamp {
-    position: absolute;
-    width: 30px; 
-    height: auto;
-    opacity: 1;
-    animation: fly linear infinite;
+    display: block;
+    transform-origin: center;
+    animation: swing var(--swing-speed) ease-in-out infinite alternate,
+    rotate var(--rotate-speed) ease-in-out infinite alternate;
   }
+
   
 #MainContainer{
-    padding: 5% 10%;
+    padding: 5% 22%;
     width: 100%;
+    overflow: hidden;
 }
 
 #AboutMe{
@@ -374,19 +410,19 @@ footer{
 #AboutMe span{
     color: var(--main-color-sakura);
     text-align: start;
-    font-size: 0.8em;
+    font-size: 0.9em;
     font-family: monckeberg;
 }
 
 #AboutMe h2{
     color: white;
     font-family: geishta;
-    font-size: 3.5em;
+    font-size: 3.7em;
 }   
 
 #AboutMe p{
     color: var(--secondary-color-font);
-    font-size: 1.15em;
+    font-size: 1.20em;
     text-align: justify;
     font-family: 'Times New Roman', Times, serif;
     opacity: 0.85;
@@ -401,7 +437,7 @@ footer{
 
 #AboutMe .aboutMe{
     width: 50%;
-    padding: 15% 5%;
+    padding: 10% 5%;
 }
 #AboutMe a{
     color: var(--main-color-sakura);

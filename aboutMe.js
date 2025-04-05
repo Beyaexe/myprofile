@@ -1,28 +1,54 @@
-const petalContainer = document.getElementById("lamp-container");
-const petalImages = "img/lamp.png";
+const lampContainer = document.getElementById("lamp-container");
+const lampImages = "img/lamp.png";
 
 function createLamp() {
+  const wrapper = document.createElement("div");
+  wrapper.classList.add("lamp-wrapper");
+
   const lamp = document.createElement("img");
-  lamp.src = petalImages;
-  lamp.classList.add("petal");
+  lamp.src = lampImages;
+  lamp.classList.add("lamp");
 
-  petal.style.left = `${Math.random() * 100}vw`;
+  const size = Math.random() * 55 + 55;
+  const duration = Math.random() * 4 + 12;
+  const swingSpeed = Math.random() * 2 + 3;
+  const rotateSpeed = Math.random() * 1.5 + 1.5;
+  const rotateDeg = Math.random() * 20 + 10;
+  const opacity = Math.random() * 0.5 + 0.5;
 
-  const size = Math.random() * 15 + 15; 
-  petal.style.width = `${size}px`;
+  const left = Math.random() * 95;
+  wrapper.style.left = `${left}vw`;
 
-  const drift = Math.random() * 40 - 20; 
-  petal.style.setProperty("--drift", `${drift}vw`);
+  const safeMargin = 100;
+  const randomOffset = Math.random() * 30;
+  const startY = window.scrollY + window.innerHeight - safeMargin - randomOffset;
+  wrapper.style.top = `${startY}px`;
 
-  const duration = Math.random() * 2 + 2; 
-  petal.style.animationDuration = `${duration}s`;
+  wrapper.style.animationDuration = `${duration}s`;
+  wrapper.style.opacity = 0;
+  wrapper.style.transition = "opacity 1s ease-in";
 
-  const rotation = Math.random() * 360;
-  petal.style.transform = `rotate(${rotation}deg)`;
+  lamp.style.width = `${size}px`;
+  lamp.style.opacity = opacity;
+  lamp.style.setProperty("--swing-speed", `${swingSpeed}s`);
+  lamp.style.setProperty("--rotate-speed", `${rotateSpeed}s`);
+  lamp.style.setProperty("--rotate-deg", `${rotateDeg}deg`);
 
-  petalContainer.appendChild(petal);
+  wrapper.appendChild(lamp);
+  lampContainer.appendChild(wrapper);
 
-  setTimeout(() => petal.remove(), duration * 1000);
+  // Suaviza o aparecimento
+  requestAnimationFrame(() => {
+    wrapper.style.opacity = opacity;
+  });
+
+  wrapper.addEventListener("animationend", () => wrapper.remove());
 }
-setInterval(createPetal, 400);
 
+function createMultipleLamps(count = 3) {
+  for (let i = 0; i < count; i++) {
+    setTimeout(createLamp, i * (500 + Math.random() * 300));
+  }
+}
+
+setInterval(() => createMultipleLamps(2), 3000);
